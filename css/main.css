@@ -56,6 +56,40 @@ a{
     border: none;
     cursor: pointer;
 }
+.btn{
+    padding: .9rem 4rem;
+    border-radius: 3rem;
+    display: inline-block;
+    background-color: var(--light-color);
+    font-weight: 500;
+    box-shadow: 0 0 7px 2px rgba(0, 0, 0, 0.2);
+    transition: var(--transition)
+}
+.btn-white{
+    color: var(--fros-blue-color);
+}
+.btn-light-blue{
+    background-color: var(--light-blue-color);
+    color: var(--light-color);
+}
+.btn-blue{
+    background-color: var(--fros-blue-color);
+    color: var(--light-color);
+}
+.btn-group{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.btn-group .btn{
+    width: 100%;
+}
+.btn-group .btn:first-child{
+    margin-bottom: 2rem;
+}
+.btn:hover{
+    box-shadow: var(--box-shadow);
+}
 
 .container{
     max-width: 95vw;
@@ -66,6 +100,9 @@ a{
     display: flex;
     align-items: center;
     justify-content: center;
+}
+.grid{
+    display: grid;
 }
 input{
     outline: 0;
@@ -222,5 +259,11 @@ button[class ^= navbar]:hover{
     .search-control{
         width: 150px;
     }
+}
+
+/* Transition and Animation Stopper */
+.resize-animation-stopper *{
+    animation: none!important;
+    transition: none!important;
 }
 
