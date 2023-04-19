@@ -107,6 +107,34 @@ a{
 input{
     outline: 0;
 }
+.lead{
+    font-size: 25px;
+    text-transform: capitalize;
+}
+h1, h2, h3{
+    text-transform: capitalize;
+    margin-top: 0;
+    line-height: 1.3;
+}
+.text{
+    opacity: 0.9;
+}
+.text-md{
+    font-size: 1.5rem;
+}
+.text-lg{
+    font-size: 2rem;
+    font-weight: 500;
+}
+.text-sm{
+    font-size: 1.3rem;
+}
+.py{
+    padding: 10.9rem 0;
+}
+.text-center{
+    text-align: center;
+}
 
 /* header */
 .header{
@@ -190,10 +218,56 @@ button[class ^= navbar]:hover{
     padding: 0 1.5rem;
 }
 
+/* header inner */
+.header-inner{
+    padding-top: 16rem;
+}
+.header-inner-left h1{
+    font-size: 4rem;
+    font-weight: 300;
+    margin-bottom: 0;
+}
+.header-inner-left h1 span{
+    font-weight: 600;
+    text-transform: uppercase;
+}
+.header-inner-left .lead{
+    opacity: 0.9;
+}
+.header-inner-left .text{
+    margin: 5.8rem 0;
+    max-width: 500px;
+    margin-right: auto;
+    margin-left: auto;
+}
+.header-inner-left .btn-group{
+    justify-content: center;
+}
+.header-inner-right{
+    margin-top: 6rem;
+}
+.header-inner-right img{
+    max-width: 520px;
+    margin: 0 auto;
+}
+
 /* Media Queries */
 @media(min-width: 450px){
     .navbar-collapse{
         width: 320px;
+    }
+    .btn-group .btn{
+        width: auto;
+    }
+    .btn-group .btn:first-child{
+        margin-right: 48px;
+        margin-bottom: 0;
+    }
+}
+
+@media(min-width: 768px){
+    .header-inner-left h1{
+        font-size: 5.7rem;
     }
 }
 
