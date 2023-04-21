@@ -251,6 +251,22 @@ button[class ^= navbar]:hover{
     margin: 0 auto;
 }
 
+/* about section */
+.section-head h2{
+    font-size: 4rem;
+    font-weight: 500;
+    margin-bottom: 3rem;
+    text-align: center;
+}
+.border-line{
+    height: .4rem;
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    background-color: var(--light-gray);
+    position: relative;
+}
+
 /* Media Queries */
 @media(min-width: 450px){
     .navbar-collapse{
