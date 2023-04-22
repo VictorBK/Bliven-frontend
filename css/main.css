@@ -266,6 +266,131 @@ button[class ^= navbar]:hover{
     background-color: var(--light-gray);
     position: relative;
 }
+.border-line::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 100%;
+    width: 102px;
+    background-color: var(--light-blue-color);
+}
+.about-left{
+    margin-bottom: 6rem;
+}
+.about-right{
+    margin-top: 16.8rem;
+}
+.about-left .text{
+    margin: 5.6rem 0;
+    line-height: 2.3;
+}
+.about .btn-white{
+    color: var(--dark-gray);
+}
+.about-right .img{
+    width: 100%;
+    background-color: #3983fe;
+    max-width: 537px;
+    position: relative;
+}
+.about-right .img img{
+    padding-top: 10rem;
+    transform: scaleX(1.03);
+}
+.about-right .img::after, .about-right .img::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+.about-right.img::after{
+    top: -56px;
+    left: 0;
+    background-color: #0060ff;
+    z-index: -1;
+}
+.about-right .img::before{
+    top: -112px;
+    left: 0;
+    background-color: var(--fros-blue-color);
+    z-index: -2;
+}
+
+/* Banner One Section */
+.banner-one{
+    background: linear-gradient(rgba(0, 80, 213, 0.9), rgba(0, 90, 213, 0.85)), url('../images/banner-1.jpeg') top/cover no-repeat;
+    height: 480px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.banner-one .lead{
+    font-size: 2.8rem;
+    font-weight: 500;
+    max-width: 600px;
+}
+.banner-one .text-sm{
+    font-weight: 500;
+}
+
+/* Services Section */
+.services .section-head .text-lg{
+    color: var(--dark-gray);
+    margin-top: -2rem;
+}
+.services.section-head img{
+    margin: 3.7rem auto;
+}
+.line-art{
+    max-width: 240px;
+    margin: auto;
+}
+.line-art img{
+    width: 30px;
+}
+.line-art div{
+    width: 100px;
+    height: 2px;
+    background-color: var(--light-gray);
+}
+.services-inner{
+    padding: 6rem 0;
+}
+.service-item{
+    padding: 3rem;
+    margin-bottom: 3rem;
+}
+.service-item:last-child{
+    margin-bottom: 0;
+}
+.service-item .icon img{
+    width: 80px;
+    margin: auto;
+}
+.service-item h3{
+    margin: 5rem 0;
+    opacity: 0.7;
+}
+
+/* Banner Two Section */
+.banner-two{
+    background: linear-gradient(rgba(0, 80, 213, 0.9), rgba(0, 90, 213, 0.85)), url('../images/banner-2.jpg') top/cover no-repeat;
+    padding: 13.6rem 0;
+}
+.banner-two-left img{
+    max-width: 620px;
+    margin: auto;
+}
+.banner-two-right .lead{
+    font-size: 2.2rem;
+    margin-top: 6rem;
+}
+.banner-two-right .btn-group{
+    margin-top: 6rem;
+    justify-content: center;
+}
 
 /* Media Queries */
 @media(min-width: 450px){
@@ -279,11 +404,17 @@ button[class ^= navbar]:hover{
         margin-right: 48px;
         margin-bottom: 0;
     }
+    .border-line{
+        width: 405px;
+    }
 }
 
 @media(min-width: 768px){
     .header-inner-left h1{
         font-size: 5.7rem;
+    }
+    .services-inner{
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
@@ -311,6 +442,47 @@ button[class ^= navbar]:hover{
         bottom: 0;
         right: 0;
         padding-left: 5-rem;
+    }
+    .about-inner .container{
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 3rem;
+    }
+    .about-left{
+        text-align: left;
+        margin-bottom: 0;
+    }
+    .about-left .section-head h2{
+        text-align: left;
+    }
+    .border-line{
+        margin-left: 0;
+    }
+    .border-line::after{
+        left: 0;
+        transform: translateX(0);
+    }
+    .about-right{
+        margin-left: auto;
+        margin-top: 11.2rem;
+    }
+
+    .banner-two .container{
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
+        column-gap: 6rem;
+    }
+    .banner-two-right{
+        text-align: left;
+    }
+    .banner-two-right .btn-group{
+        justify-content: flex-start;
+    }
+    .banner-two-right .lead{
+        margin-top: 0;
+    }
+    .banner-two-left img{
+        width: 100%;
+        max-width: 100%;
     }
 }
 
@@ -382,6 +554,14 @@ button[class ^= navbar]:hover{
     .header-inner-right img{
         padding-left: 0;
         max-width: 647px;
+    }
+
+    .services-inner{
+        grid-template-columns: repeat(4, 1fr);
+        column-gap: 2rem;
+    }
+    .service-item{
+        margin-bottom: 0;
     }
 }
 
