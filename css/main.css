@@ -392,6 +392,40 @@ button[class ^= navbar]:hover{
     justify-content: center;
 }
 
+/* Package Service */
+.package-service-inner{
+    margin: 14rem;
+}
+.package-service{
+    background: linear-gradient(rgba(0, 80, 213, 0.85), rgba(0, 80, 213, 0.95)), url('../images/service-icon-image.jpg') center/cover no-repeat;
+}
+.package-service-head{
+    color: var(--light-color);
+}
+.package-service-head h2{
+    font-size: 39px;
+}
+.package-service-item{
+    padding: 3rem 5rem;
+    position: relative;
+    margin-bottom: 12rem;
+}
+.package-service-item:last-child{
+    margin-bottom: 0;
+}
+.package-service-item .icon{
+    width: 86px;
+    height: 86px;
+    background-color: var(--light-blue-color);
+    border-radius: 2rem;
+    border-bottom-right-radius: 0;
+    color: var(--light-color);
+    position: absolute;
+    top: -43px;
+    left: 50%;
+    transform: translateX(-50%) rotate(45deg);
+}
+
 /* Media Queries */
 @media(min-width: 450px){
     .navbar-collapse{
