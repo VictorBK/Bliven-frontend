@@ -425,6 +425,51 @@ button[class ^= navbar]:hover{
     left: 50%;
     transform: translateX(-50%) rotate(45deg);
 }
+.package-service-item .icon i{
+    transform: rotate(-45deg);
+}
+.package-service-item h3{
+    opacity: 0.7;
+    margin: 8rem 0 4rem 0;
+}
+.package-service-item .text-sm{
+    color: var(--dark-gray);
+}
+.package-service-item .btn{
+    margin: 4rem 0;
+}
+
+/* Posts Section */
+.posts{
+    background-color: var(--light-gray);
+}
+.posts-inner{
+    margin-top: 6rem;
+}
+.post-item{
+    padding: 1.2rem;
+    box-shadow: var(--box-shadow);
+    margin-bottom: 6rem;
+}
+.post-item:last-child{
+    margin-bottom: 0;
+}
+.post-item .content{
+    padding: 3rem 2rem 1rem 2rem;
+}
+.post-item h4{
+    margin-bottom: 1rem;
+}
+.post-item .text{
+    padding: 1rem 0;
+}
+.post-item .info{
+    justify-content: space-between;
+    color: var(--dark-gray);
+}
+.post-item .info .text{
+    padding-bottom: 0;
+}
 
 /* Media Queries */
 @media(min-width: 450px){
@@ -449,6 +494,10 @@ button[class ^= navbar]:hover{
     }
     .services-inner{
         grid-template-columns: repeat(2, 1fr);
+    }
+    .package-service-inner, .posts-inner{
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 6rem;
     }
 }
 
@@ -517,6 +566,12 @@ button[class ^= navbar]:hover{
     .banner-two-left img{
         width: 100%;
         max-width: 100%;
+    }
+    .package-service-inner{
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .package-service-item{
+        margin-bottom: 0;
     }
 }
 
@@ -595,6 +650,12 @@ button[class ^= navbar]:hover{
         column-gap: 2rem;
     }
     .service-item{
+        margin-bottom: 0;
+    }
+    .posts-inner{
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .post-item{
         margin-bottom: 0;
     }
 }
